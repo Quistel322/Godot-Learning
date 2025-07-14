@@ -32,3 +32,5 @@ func _input(event) -> void:
 func add(num1 : int, num2 : int) -> int:
 	var result = num1 + num2
 	return result	 
+
+#новый комментЮ, написанный с гитхаба
