@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://bkj6nx8fft5l5"]
+
+[ext_resource type="Script" uid="uid://d0mm0bmueijq0" path="res://scripts/node_2d.gd" id="1_wtcfe"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_wtcfe")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 285.0
+offset_top = 146.0
+offset_right = 895.0
+offset_bottom = 489.0
+theme_override_colors/font_color = Color(0.802956, 0.49596, 0.463148, 1)
+theme_override_font_sizes/font_size = 39
+text = "Этой человек яйца"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true

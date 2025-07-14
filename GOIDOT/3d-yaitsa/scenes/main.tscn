@@ -1,0 +1,54 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0xin8udih204"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sgp6g"]
+sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+
+[sub_resource type="Sky" id="Sky_o5qli"]
+sky_material = SubResource("ProceduralSkyMaterial_sgp6g")
+
+[sub_resource type="Environment" id="Environment_0wfyh"]
+background_mode = 2
+sky = SubResource("Sky_o5qli")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="Main" type="Node3D"]
+transform = Transform3D(0.548188, 0, 0, 0, 0.548188, 0, 0, 0, 0.548188, 0, 0, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_0wfyh")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-1.54697, 0.141285, 0.956346, 0.911784, 0.812942, 1.35479, -0.321261, 1.62691, -0.760018, 0, 16.0529, -16.7826)
+shadow_enabled = true
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0500002, 0, 0)
+use_collision = true
+size = Vector3(58.9, 1, 57.8)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.00556, -9.66822)
+size = Vector3(25.2, 3, 1)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 12.0397, 2.08133, 0.364839)
+size = Vector3(19.1, 2.79834, 1)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.2221, 5.55068, 0.71758)
+size = Vector3(1, 10.1, 19.6)
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="CSGCombiner3D"]
+transform = Transform3D(1.91053e-08, -2.94449, 0.5, 4.81869e-08, 1.7, 0.866026, -1, 1.63096e-07, 8.15478e-08, -6.06984, 3.83081, 0.182418)
+operation = 2
+radius = 2.7
+height = 6.4
+sides = 32
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1.82419, 0, 0, 0, 1.47215, 1.07725, 0, -1.07725, 1.47215, 0, 12.3916, 20.6339)
